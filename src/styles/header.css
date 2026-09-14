@@ -1,0 +1,116 @@
+/* Navigation */
+
+header {
+  position: fixed;
+  z-index: 100;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 5vw;
+
+  border-bottom: 1px solid var(--line);
+
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+}
+
+header > a {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.navbar-logo {
+  width: 56px;
+  height: 56px;
+
+  border-radius: 25%;
+
+  object-fit: cover;
+}
+
+nav a {
+  color: var(--dim);
+
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Theme Toggle */
+
+.theme-toggle {
+  display: flex;
+  gap: 2px;
+
+  padding: 3px;
+
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  background: var(--surface);
+}
+
+.theme-toggle button {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--muted);
+
+  cursor: pointer;
+  font-size: 0.8rem;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.theme-toggle button:hover {
+  color: var(--text);
+}
+
+.theme-toggle button.active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+@media (max-width: 750px) {
+  .theme-toggle {
+    display: none;
+  }
+
+  .navbar-logo {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 25%;
+
+    object-fit: cover;
+  }
+}

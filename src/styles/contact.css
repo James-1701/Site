@@ -1,0 +1,45 @@
+/* Contact */
+
+.contact {
+  padding: 170px 5vw;
+
+  text-align: center;
+}
+
+.contact h2 {
+  max-width: 1100px;
+
+  margin: 5px auto 25px;
+
+  font-size: clamp(4rem, 10vw, 6.7rem);
+  line-height: 0.85;
+  letter-spacing: -0.08em;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+}
+
+.contact-links a {
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 750px) {
+  .contact {
+    padding: 120px 5vw;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 18px;
+  }
+}

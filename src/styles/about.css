@@ -1,0 +1,34 @@
+.about {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 0.5s ease,
+    opacity 0.4s ease;
+}
+
+.about > .about-content {
+  overflow: hidden;
+}
+
+.about.about-visible {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.more-link {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.more-link:hover {
+  color: var(--text);
+}

@@ -1,0 +1,29 @@
+/* Skills */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-list span {
+  padding: 13px 16px;
+
+  border: 1px solid var(--line);
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.skill-list span:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--surface);
+}

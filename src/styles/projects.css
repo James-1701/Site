@@ -1,0 +1,81 @@
+/* Projects */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  background: var(--line);
+}
+
+.project {
+  min-height: 330px;
+  padding: 35px;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  background: var(--bg);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.project:hover {
+  background: var(--surface);
+  transform: translateY(-5px);
+}
+
+.project-number {
+  color: var(--accent);
+
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+}
+
+.project h2 {
+  margin: 20px 0 15px;
+
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+
+.project p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-top: 20px;
+}
+
+.tags span {
+  padding: 5px 8px;
+
+  border: 1px solid var(--line);
+
+  color: var(--dim);
+
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+}
+
+.project-grid > *:last-child:nth-child(3n + 1) {
+  grid-column: span 3;
+}
+
+.project-grid > *:last-child:nth-child(3n + 2) {
+  grid-column: span 2;
+}
+
+@media (max-width: 750px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
