@@ -1,5 +1,7 @@
+import profilePhotoOptimized from "../assets/profile-optimized.webp";
 import profilePhoto from "../assets/profile.jpeg";
 import About from "./About";
+import { useState } from "react";
 
 interface HeroProps {
   showAbout: boolean;
@@ -7,6 +9,7 @@ interface HeroProps {
 }
 
 function Hero({ showAbout, setShowAbout }: HeroProps) {
+  const [loaded, setLoaded] = useState(false);
   return (
     <section className="hero">
       <div className="hero-content">
@@ -42,7 +45,19 @@ function Hero({ showAbout, setShowAbout }: HeroProps) {
 
           <div className="hero-photo">
             <div className="hero-photo-frame">
-              <img src={profilePhoto} alt="Photo of myself" />
+              =======
+              <img
+                className={`profile-optimized ${loaded ? "loaded" : ""}`}
+                src={profilePhotoOptimized}
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                className={`profile ${loaded ? "loaded" : ""}`}
+                src={profilePhoto}
+                alt="Photo of myself"
+                onLoad={() => setLoaded(true)}
+              />
             </div>
           </div>
         </div>

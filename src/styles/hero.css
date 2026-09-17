@@ -110,15 +110,29 @@
   width: 100%;
   height: 100%;
 
-  padding: 10px;
-
-  border: 1px solid var(--line);
   border-radius: 50%;
   overflow: hidden;
 
   background: var(--surface);
 
   box-shadow: 0 0 0 10px color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.profile,
+.profile-optimized {
+  position: absolute;
+  inset: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+}
+
+.profile {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile.loaded {
+  opacity: 1;
 }
 
 /* Merged: only one image rule needed (was duplicated as .hero-photo img) */
