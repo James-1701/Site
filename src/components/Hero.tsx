@@ -26,9 +26,9 @@ function Hero({ showAbout, setShowAbout }: HeroProps) {
             </h1>
 
             <p className="intro">
-              a Computer Science student in the honors college at Grand Valley
-              State University, pursuing a B.S. in Computer Science with minors
-              in Cybersecurity and Engineering.
+              an honors student at Grand Valley State University, pursuing a
+              B.S. in Computer Science with minors in Cybersecurity and
+              Engineering.
             </p>
 
             <About showAbout={showAbout} />
